@@ -120,6 +120,83 @@ main {
     align-items: center;
 }
 
+footer {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Itim', cursive; /* Aplicando a fonte Itim */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px; /* Garantindo que as seções não fiquem muito pequenas */
+}
+
+.footer-section h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #FFD700; /* Cor dourada para os títulos */
+    text-transform: uppercase; /* Transformando os títulos em maiúsculas */
+}
+
+.footer-section ul, .footer-section p {
+    font-size: 16px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #FFD700; /* Efeito de hover dourado */
+}
+
+.footer-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #FFD700;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #FFD700;
+}
+
+/* Adicionando um efeito sutil no hover das redes sociais */
+.footer-section ul li a:hover {
+    color: #FFD700;
+    text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.7); /* Adicionando um leve brilho ao hover */
+}
+
 .highlighted {
     display: flex;
     justify-content: space-around;
