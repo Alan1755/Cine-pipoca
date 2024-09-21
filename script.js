@@ -1,9 +1,9 @@
 document.querySelector('.menu-btn').addEventListener('click', () => {
-    alert('Menu button clicked');
+    alert('calma lá, o bagui é estatico ainda');
 });
 
 document.querySelector('.search-btn').addEventListener('click', () => {
-    alert('Search button clicked');
+    alert('calma lá, o bagui é estatico ainda');
 });
 
 function searchMovies() {

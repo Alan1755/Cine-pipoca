@@ -29,7 +29,7 @@ header.navbar {
 }
 
 .navbar .logo img {
-    height: 50px;
+    height: 80px;
 }
 
 .navbar .menu {
@@ -62,7 +62,7 @@ header.navbar {
 .menu-btn {
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 40px;
     color: white;
     cursor: pointer;
 }
@@ -93,7 +93,7 @@ header.navbar {
     font-size: 24px;
     color: white;
     cursor: pointer;
-    margin-left: auto; /* Empurra para a direita */
+    margin-left: ; /* Empurra para a direita */
 }
 
 .search-btn i {
