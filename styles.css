@@ -93,7 +93,7 @@ header.navbar {
     font-size: 24px;
     color: white;
     cursor: pointer;
-    margin-left: ; /* Empurra para a direita */
+    margin-left: auto; /* Empurra para a direita */
 }
 
 .search-btn i {
