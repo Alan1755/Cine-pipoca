@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Itim', cursive; /* Fonte Itim, a msm do figma*/
 }
 
 body {
-    background: linear-gradient(135deg, #000000, #B22222); /* Gradiente preto para vermelho escuro */
+    background: linear-gradient(135deg, #3d1010, #B22222); /* Gradiente preto para vermelho escuro */
     color: white;
     height: 100vh;
     display: flex;
@@ -22,16 +22,36 @@ header.navbar {
     background-color: rgba(0, 0, 0, 0.7); /* Fundo transparente para a navbar */
 }
 
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    margin: 0 15px; /* Espaçamento entre logo e links */
+}
+
 .navbar .logo img {
     height: 50px;
+}
+
+.navbar .menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center; /* Centraliza o menu */
+    align-items: center;
 }
 
 .navbar .menu a {
     margin: 0 15px;
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 22px; /* Aumentar o tamanho da fonte */
     position: relative;
+}
+
+.navbar .menu a.logo-link {
+    margin: 0; /* Remove o espaçamento para a logo */
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
 }
 
 .navbar .menu a:hover {
@@ -39,12 +59,35 @@ header.navbar {
     transition: color 0.3s;
 }
 
-.menu-btn, .search-btn {
+.menu-btn {
     background: none;
     border: none;
     font-size: 24px;
     color: white;
     cursor: pointer;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto; /* Empurra para a direita */
+}
+
+.search-btn i {
+    font-size: 24px;
+    color: white;
+}
+
+.search-btn:hover i {
+    color: #FFD700;
+    transition: color 0.3s;
+}
+
+.menu-btn {
+    margin-right: auto; /* Empurra para a esquerda */
 }
 
 /* Main Section */
@@ -107,17 +150,6 @@ main {
 .genres button:hover {
     background-color: #FF4500;
     transform: scale(1.1); /* Efeito de ampliação ao passar o mouse */
-}
- 
-/* Estilizar o botão de pesquisa com o novo ícone */
-.search-btn i {
-    font-size: 24px;
-    color: white;
-}
-
-.search-btn:hover i {
-    color: #FFD700;
-    transition: color 0.3s;
 }
 
 /* Ajustar o tamanho das imagens em destaque */
