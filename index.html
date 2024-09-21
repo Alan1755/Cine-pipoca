@@ -9,48 +9,47 @@
 
 </head>
 <body>
-
     <header class="navbar">
-        <button class="menu-btn">&#9776;</button>
+        <button class="menu-btn"><i class="fas fa-bars"></i></button>
         <div class="logo">
-            <img src="imagens/cine_pipoca.png" alt="Logo Cine Pipoca">
+          <img src="imagens/cine_pipoca.png" alt="Cine Pipoca Logo">
         </div>
-        <nav class="menu">
-            <a href="#">Séries</a>
-            <a href="#">Filmes</a>
-            <a href="#">Animações</a>
-            <a href="#">Novelas</a>
-        </nav>
+        <div class="menu">
+          <a href="#">Séries</a>
+          <a href="#">Filmes</a>
+          <a href="#">Animações</a>
+          <a href="#">Novelas</a>
+        </div>
+        <input type="text" id="search-bar" placeholder="Buscar..." onkeyup="searchMovies()" class="search-bar">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </header>
       
-        <button class="search-btn">
-            <i class="fas fa-search"></i> <!-- Ícone da lupa do Font Awesome -->
-        </button>
+      <main>
+        <div class="highlighted">
+          <div class="highlight-item">
+            <img src="imagens/divertida-mente.jpg" alt="Filme 1">
+            <p>Divertida mente 2</p>
+          </div>
+          <div class="highlight-item">
+            <img src="imagens/wolverine.jpg" alt="Filme 2">
+            <p>deadpool e wolverine</p>
+          </div>
+          <div class="highlight-item">
+            <img src="imagens/coringa.jpg" alt="Filme 3">
+            <p>coringa</p>
+          </div>
+        </div>
         
-    </header>
-
-    <main>
-        <section class="highlighted">
-            <div class="highlight-item">
-                <img src="imagens/divertida-mente.jpg" alt="Divertida Mente 2">
-                <p>TOP MENSAL</p>
-            </div>
-            <div class="highlight-item">
-                <img src="imagens/wolverine.jpg" alt="Wolverine">
-                <p>TOP SEMANAL</p>
-            </div>
-            <div class="highlight-item">
-                <img src="imagens/coringa.jpg" alt="Coringa">
-                <p>NOS CINEMAS</p>
-            </div>
-        </section>
-
-        <section class="genres">
-            <button>Ação</button>
-            <button>Comédia</button>
-            <button>Terror</button>
-            <button>Aventura</button>
-        </section>
-    </main>
+        <p id="no-results-message" style="display:none; color:white; font-size:18px;">Nenhum resultado encontrado. OTARIO</p> <!-- Mensagem de nenhum resultado -->
+        
+        <div class="genres">
+          <button>Ação</button>
+          <button>Comédia</button>
+          <button>Terror</button>
+          <button>Aventura</button>
+        </div>
+      </main>
+      
 
     <script src="script.js"></script>
 </body>
