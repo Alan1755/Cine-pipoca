@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #3d1010, #B22222); /* Gradiente preto para vermelho escuro */
+    background: linear-gradient(135deg, #653408 0%, #B22222 49%, #160B02 100%); /* Gradiente preto para vermelho escuro */
     color: white;
     height: 100vh;
     display: flex;
@@ -120,7 +120,7 @@ main {
 }
 
 .highlight-item p {
-    background-color: #B22222;
+    background-color: #00000091;
     padding: 5px 10px;
     border-radius: 5px;
     margin-top: 10px;
