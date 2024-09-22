@@ -1,309 +1,233 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Itim', cursive; /* Fonte Itim, a msm do figma */
-  }
-  
-  body {
-    background: linear-gradient(135deg, #653408 0%, #B22222 49%, #160B02 100%); /* Gradiente preto para vermelho escuro */
-    color: #fff;
-    font-family: 'Itim', cursive;
-  }
-  
-  h2 {
-    margin-left: 20px;
-    font-size: 1.5em;
-    font-weight: 600;
-    padding-top: 10px;
-  }
-  
-  
-  .scroll-container {
-    display: flex;
-    flex-wrap: nowrap; /* Garante que os itens fiquem em uma linha */
-    overflow-x: auto; /* Ativa a rolagem horizontal */
-    padding: 5px 0; /* Reduz o padding para aproximar a barra de rolagem */
-    gap: 10px; /* Espaçamento entre os itens */
-    scrollbar-width: thin; /* Barra de rolagem mais fina */
-    margin-bottom: 10px; /* Garante que a barra de rolagem não fique muito abaixo */
+/* Global Styles */  
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Itim', cursive; 
 }
 
-.scroll-container::-webkit-scrollbar {
-    height: 8px; /* Altura da barra de rolagem horizontal */
+body {
+  background: linear-gradient(135deg, #653408 0%, #B22222 49%, #160B02 100%);
+  color: #fff;
 }
 
-.scroll-container::-webkit-scrollbar-thumb {
-    background-color: #FFD700; /* Cor da barra */
-    border-radius: 10px; /* Bordas arredondadas */
+h2 {
+  margin-left: 20px;
+  font-size: 1.5em;
+  padding-top: 10px;
+}
+
+.scroll-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 5px 0;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
 }
 
 .scroll-container .item {
-    flex: 0 0 auto; /* Garante que os itens mantenham suas dimensões */
-    width: 160px; /* Largura fixa dos itens */
-    height: auto; /* Altura automática */
-    aspect-ratio: 2/3; /* Mantém a proporção das imagens */
+  flex: 0 0 auto;
+  width: 160px;
+  height: auto;
 }
 
-/* Estilos responsivos para dispositivos menores */
-@media (max-width: 768px) {
-    .scroll-container .item {
-        width: 130px; /* Largura menor para telas médias */
-    }
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
 }
 
-@media (max-width: 480px) {
-    .scroll-container .item {
-        width: 100px; /* Largura ainda menor para telas pequenas */
-    }
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #FFD700;
+  border-radius: 10px;
 }
 
-
-  .item {
-    flex: 0 0 auto;
-    margin-right: 10px;
-    text-align: center;
-  }
-  
-  .item img {
-    width: 200px; /* Controla o tamanho das imagens */
-    height: 300px; /* Altura fixa */
-    object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.3s;
-  }
-  
-  .item img:hover {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
-  }
-  
-  .item p {
-    margin-top: 10px;
-    font-size: 0.9em;
-  }
-  
-  
-  /* Ajustes no estilo de navegação */
-  header.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .navbar .logo img {
-    height: 80px;
-  }
-  
-  .navbar .menu a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: white;
-    font-size: 22px;
-    position: relative;
-  }
-  
-  .navbar .menu a:hover {
-    color: #FFD700;
-    transition: color 0.3s;
-  }
-  
-  .search-bar {
-    background-color: #222;
-    border: none;
-    color: white;
-    padding: 10px;
-    margin-left: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    outline: none;
-  }
-  
-  .search-bar:focus {
-    background-color: #333;
-    transition: background-color 0.3s;
-  }
-  
-  .menu-btn {
-    background: none;
-    border: none;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
+.item img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s;
 }
+
+.item img:hover {
+  transform: scale(1.1);
+}
+
+.item p {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+button.prev-btn, button.next-btn {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #fff;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+button.prev-btn:hover, button.next-btn:hover {
+  background-color: rgba(255, 215, 0, 0.8);
+}
+
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar .logo img {
+  height: 80px;
+}
+
+.navbar .menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+
+.navbar .menu a:hover {
+  color: #FFD700;
+}
+
 .search-bar {
-    background-color: #222;
-    border: none;
-    color: white;
-    padding: 10px;
-    margin-left: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    outline: none;
+  background-color: #222;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
 }
 
 .search-bar::placeholder {
-    color: #bbb;
+  color: #bbb;
 }
 
 .search-bar:focus {
-    background-color: #333;
-    transition: background-color 0.3s;
+  background-color: #333;
 }
 
-
 .search-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    margin-left: auto; /* Empurra para a direita */
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
 }
 
 .search-btn i {
-    font-size: 24px;
-    color: white;
+  color: white;
 }
 
 .search-btn:hover i {
-    color: #FFD700;
-    transition: color 0.3s;
-}
-
-.menu-btn {
-    margin-right: auto; /* Empurra para a esquerda */
+  color: #FFD700;
 }
 
 main {
-    padding: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}  
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-/* Genre Buttons */
 .genres {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .genres button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .genres button:hover {
-    background-color: #FF4500;
-    transform: scale(1.1); /* Efeito de ampliação ao passar o mouse */
+  background-color: #FF4500;
 }
 
-/* Ajustar o tamanho das imagens em destaque */
-.highlight-item img {
-    width: 200px; /* Largura fixa para todas as imagens */
-    height: 300px; /* Altura fixa para garantir proporção */
-    object-fit: cover; /* Ajusta a imagem dentro do espaço definido */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-}
-
-#no-results-message {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.genres {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.highlight-item {
-    text-align: center;
-    margin: 0 10px;
-}
-
-  /* Ajustes no rodapé */
-  footer {
-    background-color: rgba(0, 0, 0, 0.95);
-    padding: 40px 0;
-    color: white;
-    text-align: center;
-    margin-top: 40px;
-    font-family: 'Itim', cursive; /* Aplicando a fonte Itim */
+/* Ajustes no rodapé */
+footer {
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 40px 0;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Itim', cursive; /* Aplicando a fonte Itim */
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-section {
-    flex: 1;
-    padding: 20px;
-    min-width: 250px; /* Garantindo que as seções não fiquem muito pequenas */
+  flex: 1;
+  padding: 20px;
+  min-width: 250px; /* Garantindo que as seções não fiquem muito pequenas */
 }
 
 .footer-section h4 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #FFD700; /* Cor dourada para os títulos */
-    text-transform: uppercase; /* Transformando os títulos em maiúsculas */
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #FFD700; /* Cor dourada para os títulos */
+  text-transform: uppercase; /* Transformando os títulos em maiúsculas */
 }
 
 .footer-section ul, .footer-section p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .footer-section ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-section ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-section ul li a {
-    color: #FFF;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #FFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #FFD700; /* Efeito de hover dourado */
+  color: #FFD700; /* Efeito de hover dourado */
 }
 
 .footer-section p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0;
 }
 
 .footer-bottom {
-    margin-top: 20px;
-    font-size: 14px;
-    border-top: 1px solid #FFD700;
-    padding-top: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #FFD700;
+  padding-top: 10px;
 }
 
 .footer-bottom p {
-    margin: 0;
-    color: #FFD700;
+  margin: 0;
+  color: #FFD700;
 }

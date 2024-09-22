@@ -1,3 +1,19 @@
+const scrollContainer = document.querySelector('.scroll-container');
+const scrollLeftButton = document.querySelector('.scroll-left');
+const scrollRightButton = document.querySelector('.scroll-right');
+
+// Define a quantidade de rolagem por clique
+const scrollAmount = 300;
+
+scrollLeftButton.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+scrollRightButton.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
+
+
 document.querySelector('.menu-btn').addEventListener('click', () => {
     alert('calma lá, o bagui é estatico ainda');
 });
@@ -38,4 +54,5 @@ function searchMovies() {
     noResultsMessage.style.display = hasResults ? "none" : "block";
     genresSection.style.display = query.length > 0 ? "none" : "flex";
 }
+
 
