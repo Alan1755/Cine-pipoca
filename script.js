@@ -45,4 +45,3 @@ function searchMovies() {
         genresSection.style.display = "flex"; // Mostra novamente as categorias quando o campo de pesquisa está vazio
     }
 }
-
