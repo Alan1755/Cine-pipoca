@@ -22,11 +22,12 @@
   
   .scroll-container {
     display: flex;
-    flex-wrap: nowrap; /* Garante que os itens não quebrem linha */
+    flex-wrap: nowrap; /* Garante que os itens fiquem em uma linha */
     overflow-x: auto; /* Ativa a rolagem horizontal */
-    padding: 10px 0; /* Adiciona espaçamento vertical */
+    padding: 5px 0; /* Reduz o padding para aproximar a barra de rolagem */
     gap: 10px; /* Espaçamento entre os itens */
     scrollbar-width: thin; /* Barra de rolagem mais fina */
+    margin-bottom: 10px; /* Garante que a barra de rolagem não fique muito abaixo */
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -34,19 +35,30 @@
 }
 
 .scroll-container::-webkit-scrollbar-thumb {
-    background-color: #ffd9003a; /* Cor da barra */
+    background-color: #FFD700; /* Cor da barra */
     border-radius: 10px; /* Bordas arredondadas */
-}
-
-.scroll-container:hover::-webkit-scrollbar {
-    display: block; /* Exibir a barra de rolagem ao passar o mouse */
 }
 
 .scroll-container .item {
     flex: 0 0 auto; /* Garante que os itens mantenham suas dimensões */
-    width: 180px; /* Largura fixa para os itens, ajuste conforme necessário */
-    height: 375px; /* Altura fixa para os itens */
+    width: 160px; /* Largura fixa dos itens */
+    height: auto; /* Altura automática */
+    aspect-ratio: 2/3; /* Mantém a proporção das imagens */
 }
+
+/* Estilos responsivos para dispositivos menores */
+@media (max-width: 768px) {
+    .scroll-container .item {
+        width: 130px; /* Largura menor para telas médias */
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-container .item {
+        width: 100px; /* Largura ainda menor para telas pequenas */
+    }
+}
+
 
   .item {
     flex: 0 0 auto;
