@@ -7,41 +7,35 @@ document.querySelector('.search-btn').addEventListener('click', () => {
 });
 
 function searchMovies() {
-    // Obtém o valor de pesquisa e converte para minúsculas
     const query = document.getElementById('search-bar').value.toLowerCase();
-    
-    // Seleciona todos os itens de filmes ou séries
-    const items = document.querySelectorAll('.highlight-item');
-    
-    // Seleciona a mensagem de "nenhum resultado" e as categorias
+    const items = document.querySelectorAll('.item');
     const noResultsMessage = document.getElementById('no-results-message');
     const genresSection = document.querySelector('.genres');
-    
-    // Contador de resultados
+    const categories = document.querySelectorAll('.category'); // Seleciona as categorias
     let hasResults = false;
-    
-    // Itera sobre os itens e mostra/esconde com base na pesquisa
-    items.forEach(item => {
-        const title = item.querySelector('p').textContent.toLowerCase();
-        if (title.includes(query)) {
-            item.style.display = "block"; // Exibe o item se corresponder
-            hasResults = true; // Se achou algum item, marca como "tem resultado"
-        } else {
-            item.style.display = "none";  // Esconde o item se não corresponder
-        }
+
+    categories.forEach(category => {
+        const categoryItems = category.querySelectorAll('.item');
+        let categoryHasResults = false; // Para controlar se a categoria tem resultados
+
+        categoryItems.forEach(item => {
+            const title = item.querySelector('p').textContent.toLowerCase();
+            if (title.includes(query)) {
+                item.style.display = "block";
+                categoryHasResults = true; // Se algum item corresponde, a categoria tem resultados
+            } else {
+                item.style.display = "none";
+            }
+        });
+
+        // Se a categoria não tem resultados, esconde o h2
+        category.querySelector('h2').style.display = categoryHasResults ? "block" : "none";
     });
 
-    // Se não encontrou resultados, mostra a mensagem
-    if (!hasResults) {
-        noResultsMessage.style.display = "block";
-    } else {
-        noResultsMessage.style.display = "none";
-    }
-    
-    // Esconde as categorias enquanto o usuário digita
-    if (query.length > 0) {
-        genresSection.style.display = "none";
-    } else {
-        genresSection.style.display = "flex"; // Mostra novamente as categorias quando o campo de pesquisa está vazio
-    }
+    // Verifica se há resultados em geral
+    hasResults = Array.from(items).some(item => item.style.display === "block");
+
+    noResultsMessage.style.display = hasResults ? "none" : "block";
+    genresSection.style.display = query.length > 0 ? "none" : "flex";
 }
+

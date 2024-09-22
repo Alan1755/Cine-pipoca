@@ -38,10 +38,13 @@
   }
   
   .item img {
-    max-width: 200px;
-    border-radius: 8px;
+    width: 200px; /* Largura fixa */
+    height: 300px; /* Altura fixa */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+    border-radius: 12px;
     transition: transform 0.3s;
-  }
+}
+
   
   .item img:hover {
     transform: scale(1.1); /* Zoom ao passar o mouse */
