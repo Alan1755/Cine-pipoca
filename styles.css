@@ -20,17 +20,34 @@
   }
   
   
-
   .scroll-container {
     display: flex;
-    overflow-x: auto;
-    padding: 10px 20px;
-  }
-  
-  .scroll-container::-webkit-scrollbar {
-    display: none; /* Esconde a barra de rolagem */
-  }
-  
+    flex-wrap: nowrap; /* Garante que os itens não quebrem linha */
+    overflow-x: auto; /* Ativa a rolagem horizontal */
+    padding: 10px 0; /* Adiciona espaçamento vertical */
+    gap: 10px; /* Espaçamento entre os itens */
+    scrollbar-width: thin; /* Barra de rolagem mais fina */
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 8px; /* Altura da barra de rolagem horizontal */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #ffd9003a; /* Cor da barra */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.scroll-container:hover::-webkit-scrollbar {
+    display: block; /* Exibir a barra de rolagem ao passar o mouse */
+}
+
+.scroll-container .item {
+    flex: 0 0 auto; /* Garante que os itens mantenham suas dimensões */
+    width: 180px; /* Largura fixa para os itens, ajuste conforme necessário */
+    height: 375px; /* Altura fixa para os itens */
+}
+
   .item {
     flex: 0 0 auto;
     margin-right: 10px;
@@ -38,22 +55,22 @@
   }
   
   .item img {
-    width: 200px; /* Largura fixa */
+    width: 200px; /* Controla o tamanho das imagens */
     height: 300px; /* Altura fixa */
-    object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+    object-fit: cover;
     border-radius: 12px;
     transition: transform 0.3s;
-}
-
+  }
   
   .item img:hover {
-    transform: scale(1.1); /* Zoom ao passar o mouse */
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
   }
   
   .item p {
     margin-top: 10px;
     font-size: 0.9em;
   }
+  
   
   /* Ajustes no estilo de navegação */
   header.navbar {
