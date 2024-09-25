@@ -18,11 +18,11 @@ body {
 /* Estilo para os itens do menu */
 .menu {
   display: flex;
-  gap: 40px; /* Espaçamento entre os links */
+  gap: 30px; /* Espaçamento entre os links */
 }
 
 .menu a {
-  color: white;
+  color: rgb(255, 251, 0);
   text-decoration: none;
   font-size: 18px;
   padding: 10px 15px;
@@ -113,6 +113,8 @@ header.navbar {
   height: 80px;
 }
 
+
+
 .navbar .menu a {
   margin: 0 15px;
   text-decoration: none;
@@ -166,6 +168,30 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(247, 2, 2, 0.384);
+}
+
+.menu-btn:hover {
+  background-color: #ffee00;
+  transform: scale(1.1);
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: white;
+}
+
 
 .genres {
   display: flex;
