@@ -45,7 +45,8 @@ function searchMovies() {
         });
 
         // Se a categoria não tem resultados, esconde o h2
-        category.querySelector('h2').style.display = categoryHasResults ? "block" : "none";
+       
+        category.style.display = categoryHasResults ? "block" : "none";
     });
 
     // Verifica se há resultados em geral
