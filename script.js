@@ -55,4 +55,3 @@ function searchMovies() {
     noResultsMessage.style.display = hasResults ? "none" : "block";
     genresSection.style.display = query.length > 0 ? "none" : "flex";
 }
-
