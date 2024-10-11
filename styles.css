@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #653408 0%, #B22222 49%, #160B02 100%);
+  background: linear-gradient(135deg, #ff0101 0%, #360000 0%, #d10b01e2 100%);
   color: #fff;
 }
 
@@ -170,6 +170,7 @@ main {
   align-items: center;
 }
 
+
 .menu-btn {
   display: flex;
   justify-content: center;
@@ -219,7 +220,7 @@ main {
 footer {
   background-color: rgba(0, 0, 0, 0.95);
   padding: 40px 0;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   margin-top: 40px;
   font-family: 'Itim', cursive; /* Aplicando a fonte Itim */
@@ -266,7 +267,7 @@ footer {
 }
 
 .footer-section ul li a:hover {
-  color: #FFD700; /* Efeito de hover dourado */
+  color: #fffb00; /* Efeito de hover dourado */
 }
 
 .footer-section p {
