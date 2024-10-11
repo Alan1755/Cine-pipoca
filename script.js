@@ -1,3 +1,4 @@
+
 const scrollContainer = document.querySelector('.scroll-container');
 const scrollLeftButton = document.querySelector('.scroll-left');
 const scrollRightButton = document.querySelector('.scroll-right');
@@ -55,5 +56,3 @@ function searchMovies() {
     noResultsMessage.style.display = hasResults ? "none" : "block";
     genresSection.style.display = query.length > 0 ? "none" : "flex";
 }
-
-
