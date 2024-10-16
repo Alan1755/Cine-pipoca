@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #ff0101 0%, #360000 0%, #d10b01e2 100%);
+  background: linear-gradient(135deg, #000000 0%, #000000 0%, #000000 0%);
   color: #fff;
 }
 
@@ -17,8 +17,9 @@ body {
 
 /* Estilo para os itens do menu */
 .menu {
-  display: flex;
-  gap: 30px; /* Espaçamento entre os links */
+  background: linear-gradient(#FFF)
+  display flex;
+  gap :30px; /* Espaçamento entre os links */
 }
 
 .menu a {
@@ -30,7 +31,7 @@ body {
 }
 
 .menu a:hover {
-  background-color: #000000b2; /* Cor de fundo ao passar o mouse */
+  background-color: #777777b2; /* Cor de fundo ao passar o mouse */
   border-radius: 15px; /* Bordas arredondadas */
 }
 
@@ -46,12 +47,16 @@ h2 {
   overflow-x: auto;
   padding: 5px 0;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 100px;
   align-items: center;
 }
 
 .scroll-container {
-  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth; /* Suaviza a rolagem */
+  padding: 10px 0;
 }
 
 .scroll-container .item {
@@ -70,16 +75,23 @@ h2 {
   border-radius: 10px;
 }
 
-.item img {
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 15px;
-  transition: transform 0.9s;
+.item {
+  width: 220px; /* Largura fixa para cada item */
+  margin: 10px; /* Espaçamento entre os itens */
+  text-align: center; /* Centraliza o texto abaixo da imagem */
+  display: inline-block;
 }
 
+.item img {
+  width: 100%; /* Ajusta a largura ao container */
+  height: 180px; /* Altura fixa para manter a proporção horizontal */
+  object-fit: cover; /* Garante que a imagem ocupe todo o espaço sem distorcer */
+  border-radius: 2px; /* Bordas arredondadas para um design mais suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar as imagens */
+  transition: transform 0.3s; /* Efeito de zoom suave */
+}
 .item img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .item p {
@@ -87,19 +99,21 @@ h2 {
   font-size: 0.9em;
 }
 
-button.prev-btn, button.next-btn {
-  background-color: rgba(0, 0, 0, 0.6);
-  border: none;
-  color: #fff;
-  padding: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  border-radius: 50%;
-  margin-left: 40px;
+.prev-btn:hover, .next-btn:hover {
+  color: #ff6347; /* Troca a cor ao passar o mouse */
 }
 
-button.prev-btn:hover, button.next-btn:hover {
-  background-color: rgba(255, 215, 0, 0.8);
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.prev-btn, .next-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
 header.navbar {
@@ -107,7 +121,7 @@ header.navbar {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #830400;
 }
 
 .navbar .logo img {
@@ -128,15 +142,15 @@ header.navbar {
 }
 
 .search-bar {
-  background-color: #222;
-  border: none;
-  color: white;
+  background: rgba(0, 0, 0, 0.416)
+  border none;
+  color: #ffffff;
   padding: 10px;
   margin-left: 10px;
   font-size: 16px;
   border-radius: 5px;
   outline: none;
-}
+} 
 
 .search-bar::placeholder {
   color: #bbb;
@@ -218,7 +232,7 @@ main {
 
 /* Ajustes no rodapé */
 footer {
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(2, 2, 2, 0);
   padding: 40px 0;
   color: rgb(255, 255, 255);
   text-align: center;
